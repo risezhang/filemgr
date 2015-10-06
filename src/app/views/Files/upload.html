@@ -1,0 +1,40 @@
+#{extends 'main.html' /} #{set title:'Upload' /}
+
+<form method="post" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="exampleInputEmail1">Category</label> <input type="text"
+			class="form-control" id="name" name="name" placeholder="name"
+			value="${name}">
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Please enter a URL or pick up a local
+				file</h3>
+		</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label for="fileName">File Name (optional)</label>
+				<p>Get from the URL or the uploaded file if it is not set</p>
+				<input type="text" name="fileName" id="url" class="form-control"
+					placeholder="foo.zip">
+			</div>
+			<div class="form-group">
+				<label for="url">URL</label> <input type="text" name="url" id="url"
+					class="form-control" placeholder="http://abc.com/foo.zip">
+			</div>
+			<div class="form-group">
+				<label for="file">File input</label> <input type="file" id="file"
+					name="file">
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="comment">Comment</label> <input type="text" id="comment"
+			name="comment" class="form-control"
+			placeholder="Leave some comments here">
+	</div>
+
+	<button type="submit" class="btn btn-default">Submit</button>
+</form>

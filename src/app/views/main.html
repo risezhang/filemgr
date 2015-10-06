@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        
+        <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="@{'/public/bootstrap/3.3.5/css/bootstrap.min.css'}">
+		<link rel="stylesheet" href="@{'/public/bootstrap/3.3.5/css/bootstrap-theme.min.css'}">
+        
+    </head>
+    <body>
+	    <ul class="nav nav-pills">
+		  <li role="presentation"><a href="@{Files.list}">List</a></li>
+		  <li role="presentation"><a href="@{Files.upload()}">Upload</a></li>
+		</ul>
+
+
+	#{ifErrors} #{list errors, as:'error'}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="alert alert-danger alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<strong>Error!</strong> ${error}
+				</div>
+			</div>
+		</div>
+	</div>
+	#{/list} #{/ifErrors}
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8">#{doLayout /}</div>
+		</div>
+	</div>
+
+	<script src="@{'/public/javascripts/jquery-1.11.3.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="@{'/public/bootstrap/3.3.5/js/bootstrap.min.js'}"></script>
+        #{get 'moreScripts' /}
+    </body>
+</html>
