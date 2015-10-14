@@ -91,7 +91,7 @@ public class Files extends Controller {
     		}
     		
     		// 转移文件至data目录
-    		DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_hh:mm:ss");
+    		DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss");
     		String outputPath = String.format("data/%s/%s/", name, sdf.format(new Date()), fileName);
     		
     		InputStream is =null;
