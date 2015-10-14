@@ -12,13 +12,20 @@
 		<link rel="stylesheet" href="@{'/public/bootstrap/3.3.5/css/bootstrap.min.css'}">
 		<link rel="stylesheet" href="@{'/public/bootstrap/3.3.5/css/bootstrap-theme.min.css'}">
         
+        <style>
+        	div#nav-bar {
+        		margin: 20px;
+        	}
+        </style>
     </head>
     <body>
-	    <ul class="nav nav-pills">
-		  <li role="presentation"><a href="@{Files.list}">List</a></li>
-		  <li role="presentation"><a href="@{Files.upload()}">Upload</a></li>
-		</ul>
-
+	    <div id="nav-bar">
+		    <ul class="nav nav-tabs">
+			  <li role="presentation" class="#{if title=='List'}active#{/if}"><a href="@{Files.list}">List</a></li>
+			  <li role="presentation" class="#{if title=='Upload'}active#{/if}"><a href="@{Files.upload(request.params.name)}">Upload</a></li>
+			</ul>
+	    </div>
+		
 
 	#{ifErrors} #{list errors, as:'error'}
 	<div class="container-fluid">
