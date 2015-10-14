@@ -1,4 +1,6 @@
-#{extends 'main.html' /} #{set title:'Upload' /} #{if categories}
+#{extends 'main.html' /} #{set title:'List' /} 
+
+#{if categories}
 <table class="table">
 	<tr>
 		<th>ID</th>
@@ -16,7 +18,9 @@
 	</tr>
 	#{/list}
 </table>
-#{/if} #{if files}
+#{/if} 
+
+#{if files}
 <h3>${category.name}</h3>
 <table class="table">
 	<tr>
@@ -38,3 +42,4 @@
 	#{/list}
 </table>
 #{/if}
+
