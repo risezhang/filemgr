@@ -5,7 +5,7 @@ a web application of version based file storage
 
 -----
 
-The **src** folder contains a **Play Framework**[^playframework]. 
+The **src** folder contains a **Play Framework**. 
 
 #### System requirements
 
@@ -30,4 +30,4 @@ cd filemgr/src
 
 Then import the project is ready to be imported into Eclipse.
 
- [^playframework]: [Play Framework](https://playframework.com/) is a high velocity web framework for Java and Scala.
+Play Framework: [Play Framework](https://playframework.com/) is a high velocity web framework for Java and Scala.
