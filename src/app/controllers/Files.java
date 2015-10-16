@@ -21,7 +21,9 @@ import org.apache.commons.lang.StringUtils;
 
 import play.Logger;
 import play.mvc.Controller;
+import play.mvc.With;
 
+@With(Auth.class)
 public class Files extends Controller {
 
 	/**
