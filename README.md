@@ -1,7 +1,7 @@
 Filemgr
 ===================
 
-a web application of version based file storage
+a web application of version based file storage.
 
 -----
 
@@ -29,5 +29,9 @@ cd filemgr/src
 ```
 
 Then import the project is ready to be imported into Eclipse.
+
+#### To import it into Eclipse
+1. Add management of users and permissions.
+2. Use tokens to control accesses to resources.
 
 Play Framework: [Play Framework](https://playframework.com/) is a high velocity web framework for Java and Scala.
